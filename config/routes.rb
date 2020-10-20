@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :games_platforms
   resources :platforms
   resources :games
   resources :settings
