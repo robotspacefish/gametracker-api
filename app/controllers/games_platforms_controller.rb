@@ -1,0 +1,2 @@
+class GamesPlatformsController < ApplicationController
+end

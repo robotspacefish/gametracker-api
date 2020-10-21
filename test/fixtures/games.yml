@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  summary: MyString
+  idgb_id: MyString
+  member_rating: MyString
+  critic_rating: MyString
+  finish_time_hasty: MyString
+  finish_time_normal: MyString
+  finish_time_completionist: MyString
+
+two:
+  title: MyString
+  summary: MyString
+  idgb_id: MyString
+  member_rating: MyString
+  critic_rating: MyString
+  finish_time_hasty: MyString
+  finish_time_normal: MyString
+  finish_time_completionist: MyString

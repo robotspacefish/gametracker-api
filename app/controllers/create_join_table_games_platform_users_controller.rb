@@ -1,0 +1,2 @@
+class CreateJoinTableGamesPlatformUsersController < ApplicationController
+end
