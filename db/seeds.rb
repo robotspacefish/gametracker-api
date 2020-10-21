@@ -15,12 +15,14 @@ pc = Platform.create(name: "PC")
 ps4 = Platform.create(name: "PS4")
 nsw = Platform.create(name: "Nintendo Switch")
 
-GamesPlatform.create(game_id: hk.id, platform_id: x1.id)
-GamesPlatform.create(game_id: hk.id, platform_id: pc.id)
-GamesPlatform.create(game_id: hk.id, platform_id: ps4.id)
-GamesPlatform.create(game_id: hk.id, platform_id: nsw.id)
+u = User.create(username: "jess", email: "jess@gmail.com", password: '1234')
 
-GamesPlatform.create(game_id: me.id, platform_id: pc.id)
+hk.platforms << x1 << pc << ps4 << nsw
+me.platforms << pc
+loz.platforms << nsw
 
-GamesPlatform.create(game_id: loz.id, platform_id: nsw.id)
-
+# Game.destroy_all
+# User.destroy_all
+# Platform.destroy_all
+# OwnedGame.destroy_all
+# OwnedGamesPlatform.destroy_all

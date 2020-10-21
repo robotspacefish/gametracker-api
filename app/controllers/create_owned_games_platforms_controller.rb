@@ -1,0 +1,2 @@
+class CreateOwnedGamesPlatformsController < ApplicationController
+end
