@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_21_021023) do
+ActiveRecord::Schema.define(version: 2020_10_22_175439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "consoles", force: :cascade do |t|
+    t.string "name"
+    t.string "platform_type", null: false
+    t.bigint "platform_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["platform_type", "platform_id"], name: "index_consoles_on_platform_type_and_platform_id"
+  end
 
   create_table "games", force: :cascade do |t|
     t.string "title"
@@ -26,13 +35,6 @@ ActiveRecord::Schema.define(version: 2020_10_21_021023) do
     t.string "finish_time_completionist"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "games_platforms", force: :cascade do |t|
-    t.bigint "game_id"
-    t.bigint "platform_id"
-    t.index ["game_id"], name: "index_games_platforms_on_game_id"
-    t.index ["platform_id"], name: "index_games_platforms_on_platform_id"
   end
 
   create_table "notes", force: :cascade do |t|
@@ -56,22 +58,6 @@ ActiveRecord::Schema.define(version: 2020_10_21_021023) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["game_id"], name: "index_owned_games_on_game_id"
     t.index ["user_id"], name: "index_owned_games_on_user_id"
-  end
-
-  create_table "owned_games_platforms", force: :cascade do |t|
-    t.bigint "owned_game_id"
-    t.bigint "games_platform_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["games_platform_id"], name: "index_owned_games_platforms_on_games_platform_id"
-    t.index ["owned_game_id"], name: "index_owned_games_platforms_on_owned_game_id"
-  end
-
-  create_table "platforms", force: :cascade do |t|
-    t.string "name"
-    t.string "slug"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
