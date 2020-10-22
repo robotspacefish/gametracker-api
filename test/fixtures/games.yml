@@ -1,21 +1,41 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  summary: MyString
-  idgb_id: MyString
-  member_rating: MyString
-  critic_rating: MyString
-  finish_time_hasty: MyString
-  finish_time_normal: MyString
-  finish_time_completionist: MyString
+hk:
+  title: Hollow Knight
+  summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  idgb_id: nil
+  member_rating: 91
+  critic_rating: 91
+  finish_time_hasty: nil
+  finish_time_normal: nil
+  finish_time_completionist: nil
 
-two:
-  title: MyString
-  summary: MyString
-  idgb_id: MyString
-  member_rating: MyString
-  critic_rating: MyString
-  finish_time_hasty: MyString
-  finish_time_normal: MyString
-  finish_time_completionist: MyString
+me:
+  title: Mass Effect
+  summary: Sed posuere consectetur est at lobortis.
+  idgb_id: nil
+  member_rating: 87
+  critic_rating: 89
+  finish_time_hasty: nil
+  finish_time_normal: nil
+  finish_time_completionist: nil
+
+loz:
+  title: The Legend of Zelda Breath of the Wild
+  summary: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  idgb_id: nil
+  member_rating: 92
+  critic_rating: 98
+  finish_time_hasty: nil
+  finish_time_normal: nil
+  finish_time_completionist: nil
+
+notitle:
+  title:
+  summary: Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+  idgb_id: nil
+  member_rating: 92
+  critic_rating: 98
+  finish_time_hasty: nil
+  finish_time_normal: nil
+  finish_time_completionist: nil
