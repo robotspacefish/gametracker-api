@@ -1,2 +1,0 @@
-class OwnedGamesPlatformsController < ApplicationController
-end
