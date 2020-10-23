@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :owned_games, dependent: :destroy
   has_many :games, through: :owned_games
 
-  has_many :notes
+  has_many :notes, dependent: :destroy
 
   def add_game_by_instance(game)
     self.games << game
