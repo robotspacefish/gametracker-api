@@ -42,4 +42,16 @@ RSpec.configure do |config|
   config.before(:each) { DatabaseCleaner.clean }
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+
+  config.before(:each) do
+    @user = User.create!(username: "zeldafan1", email: 'zeldafan1@gmail.com', password: '1234', private_library: false, private_recently_played: false)
+
+    @loz = Game.create!(title: "The Legend of Zelda: Breath of the Wild")
+    @hk = Game.create!(title: "Hollow Knight")
+
+    @x1 = "Xbox One"
+    @ps4 = "PS4"
+    @nsw = "Nintendo Switch"
+    @pc = "PC"
+  end
 end
